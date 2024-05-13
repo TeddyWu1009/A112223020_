@@ -41,58 +41,66 @@
             // grossPayPromptLabel
             // 
             this.grossPayPromptLabel.AutoSize = true;
-            this.grossPayPromptLabel.Location = new System.Drawing.Point(43, 14);
+            this.grossPayPromptLabel.Location = new System.Drawing.Point(64, 19);
+            this.grossPayPromptLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.grossPayPromptLabel.Name = "grossPayPromptLabel";
-            this.grossPayPromptLabel.Size = new System.Drawing.Size(85, 13);
+            this.grossPayPromptLabel.Size = new System.Drawing.Size(124, 18);
             this.grossPayPromptLabel.TabIndex = 0;
             this.grossPayPromptLabel.Text = "Total Gross Pay:";
             // 
             // bonusPromptLabel
             // 
             this.bonusPromptLabel.AutoSize = true;
-            this.bonusPromptLabel.Location = new System.Drawing.Point(49, 40);
+            this.bonusPromptLabel.Location = new System.Drawing.Point(74, 55);
+            this.bonusPromptLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bonusPromptLabel.Name = "bonusPromptLabel";
-            this.bonusPromptLabel.Size = new System.Drawing.Size(79, 13);
+            this.bonusPromptLabel.Size = new System.Drawing.Size(114, 18);
             this.bonusPromptLabel.TabIndex = 1;
             this.bonusPromptLabel.Text = "Bonus Amount:";
             // 
             // grossPayTextBox
             // 
-            this.grossPayTextBox.Location = new System.Drawing.Point(135, 10);
+            this.grossPayTextBox.Location = new System.Drawing.Point(202, 14);
+            this.grossPayTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grossPayTextBox.Name = "grossPayTextBox";
-            this.grossPayTextBox.Size = new System.Drawing.Size(100, 20);
+            this.grossPayTextBox.Size = new System.Drawing.Size(148, 29);
             this.grossPayTextBox.TabIndex = 2;
+            this.grossPayTextBox.TextChanged += new System.EventHandler(this.grossPayTextBox_TextChanged);
             // 
             // bonusTextBox
             // 
-            this.bonusTextBox.Location = new System.Drawing.Point(135, 36);
+            this.bonusTextBox.Location = new System.Drawing.Point(202, 50);
+            this.bonusTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bonusTextBox.Name = "bonusTextBox";
-            this.bonusTextBox.Size = new System.Drawing.Size(100, 20);
+            this.bonusTextBox.Size = new System.Drawing.Size(148, 29);
             this.bonusTextBox.TabIndex = 3;
             // 
             // outputDescriptionLabel
             // 
             this.outputDescriptionLabel.AutoSize = true;
-            this.outputDescriptionLabel.Location = new System.Drawing.Point(9, 81);
+            this.outputDescriptionLabel.Location = new System.Drawing.Point(14, 112);
+            this.outputDescriptionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.outputDescriptionLabel.Name = "outputDescriptionLabel";
-            this.outputDescriptionLabel.Size = new System.Drawing.Size(120, 13);
+            this.outputDescriptionLabel.Size = new System.Drawing.Size(180, 18);
             this.outputDescriptionLabel.TabIndex = 4;
             this.outputDescriptionLabel.Text = "Retirement Contribution:";
             // 
             // contributionLabel
             // 
             this.contributionLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contributionLabel.Location = new System.Drawing.Point(135, 76);
+            this.contributionLabel.Location = new System.Drawing.Point(202, 105);
+            this.contributionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contributionLabel.Name = "contributionLabel";
-            this.contributionLabel.Size = new System.Drawing.Size(100, 23);
+            this.contributionLabel.Size = new System.Drawing.Size(149, 31);
             this.contributionLabel.TabIndex = 5;
             this.contributionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(47, 111);
+            this.calculateButton.Location = new System.Drawing.Point(70, 154);
+            this.calculateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(75, 39);
+            this.calculateButton.Size = new System.Drawing.Size(112, 54);
             this.calculateButton.TabIndex = 6;
             this.calculateButton.Text = "Calculate Contribution";
             this.calculateButton.UseVisualStyleBackColor = true;
@@ -100,9 +108,10 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(128, 111);
+            this.exitButton.Location = new System.Drawing.Point(192, 154);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 39);
+            this.exitButton.Size = new System.Drawing.Size(112, 54);
             this.exitButton.TabIndex = 7;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -110,9 +119,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(250, 165);
+            this.ClientSize = new System.Drawing.Size(375, 228);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.contributionLabel);
@@ -121,6 +130,7 @@
             this.Controls.Add(this.grossPayTextBox);
             this.Controls.Add(this.bonusPromptLabel);
             this.Controls.Add(this.grossPayPromptLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Pay and Bonus";
             this.ResumeLayout(false);

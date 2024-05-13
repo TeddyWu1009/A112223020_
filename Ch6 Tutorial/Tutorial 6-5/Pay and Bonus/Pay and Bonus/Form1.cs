@@ -41,7 +41,7 @@ namespace Pay_and_Bonus
         }
         private bool InputIsValid(ref decimal grossPay, ref decimal bonus)
         {
-            if (decimal.TryParse(grossPayTextBox,out grossPay))
+            if (decimal.TryParse(grossPayTextBox.Text,out grossPay))
             {
                 if (decimal.TryParse(bonusTextBox.Text, out bonus))
                 {
@@ -63,6 +63,11 @@ namespace Pay_and_Bonus
         {
             // Close the form.
             this.Close();
+        }
+
+        private void grossPayTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
