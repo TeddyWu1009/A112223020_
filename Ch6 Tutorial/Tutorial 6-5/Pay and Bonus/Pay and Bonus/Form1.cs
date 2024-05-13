@@ -28,9 +28,37 @@ namespace Pay_and_Bonus
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            decimal grossPay = 0m;
+            decimal bonus = 0m;
+            decimal contribution = 0m;
+
+            if (InputIsValid (ref grossPay, ref bonus))
+            {
+                contribution = (grossPay + bonus) * CONTRIB_RATE;
+                contributionLabel.Text = contribution.ToString("c");
+            }
            
         }
-
+        private bool InputIsValid(ref decimal grossPay, ref decimal bonus)
+        {
+            if (decimal.TryParse(grossPayTextBox,out grossPay))
+            {
+                if (decimal.TryParse(bonusTextBox.Text, out bonus))
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("bonus格式錯誤");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("grossPay格式錯誤");
+                return false;
+            }
+        }
         private void exitButton_Click(object sender, EventArgs e)
         {
             // Close the form.

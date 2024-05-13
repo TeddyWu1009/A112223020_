@@ -29,7 +29,60 @@ namespace North_America
 
         private void getCountriesButton_Click(object sender, EventArgs e)
         {
-            
+            string filename= "";
+            //GetFileName(out filename);
+
+            filename = GetFileNamebyReturn();
+
+            GetCountries(filename);
+        }
+
+        private string GetFileNamebyReturn()
+        {
+            string selectedFile;
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                selectedFile = openFile.FileName;
+            }
+            else
+            {
+                selectedFile = "";
+            }
+            return selectedFile;
+        }
+
+        private void GetCountries(string filename)
+        {
+            try
+            {
+                string countryName;
+                StreamReader inputFile;
+                inputFile = File.OpenText(filename);
+
+                countriesListBox.Items.Clear();
+
+                while (!inputFile.EndOfStream)
+                {
+                  countryName = inputFile.ReadLine();
+                    countriesListBox.Items.Add(countryName);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void GetFileName(out string selectedFile)
+        {
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                selectedFile = openFile.FileName;
+            }
+            else
+            {
+                selectedFile = "";
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
